@@ -12,12 +12,24 @@ public class Lab2_StudentDB {
 
 class Student{
 	// properties
-			private String name;
-			private String ssn; 
+		private static int iD =1000;
+		private String name;
+		private String ssn; 
+		private String email;
 			
-	public Student(String student, String ssn){
+			
+	public Student(String name, String ssn){
+		iD++;
 		this.name = name;
 		this.ssn = ssn;
+		setAccountId();
+		setEmail();
+	}
+	
+	private void setEmail(){
+		email = name.toLowerCase() + "@sdatuniversity.com";
+		System.out.println("Your email is: " + email);
+		
 	}
 }
 
